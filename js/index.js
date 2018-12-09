@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
   $("#caja_busqueda").focus();
 
   $(buscar_datos());
@@ -22,6 +24,5 @@ $(document).ready(function(){
     }
   });
 
-  
 
 });//fin .ready

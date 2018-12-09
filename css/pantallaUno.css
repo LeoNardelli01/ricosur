@@ -1,0 +1,274 @@
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@font-face {
+  font-family: AlfaSlabOne;
+  src: url(../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Baloo;
+  src: url(../fonts/Baloo/Baloo-Regular.ttf);
+}
+
+@font-face {
+  font-family: Bangers;
+  src: url(../fonts/Bangers/Bangers-Regular.ttf);
+}
+
+@font-face {
+  font-family: Chicle;
+  src: url(../fonts/Chicle/Chicle-Regular.ttf);
+}
+
+@font-face {
+  font-family: Creepster;
+  src: url(../fonts/Creepster/Creepster-Regular.ttf);
+}
+
+@font-face {
+  font-family: Fredoka;
+  src: url(../fonts/Fredoka_One/FredokaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: IndieFlower;
+  src: url(../fonts/Indie_Flower/IndieFlower.ttf);
+}
+
+@font-face {
+  font-family: LukiestGuy;
+  src: url(../fonts/Lukiest_Guy/LukiestGuy-Regular.ttf);
+}
+
+@font-face {
+  font-family: Notable;
+  src: url(../fonts/Notable/Notable-Regular.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+header {
+  background-color: rgba(159, 71, 249, 0);
+  width: 100vw;
+
+}
+
+.card{
+  width: 280px;
+  height: 432px;
+  background: linear-gradient(to right, rgba(0, 143, 10, 0.64), rgba(219, 217, 218, 0.15), rgba(0, 143, 10, 0.64));
+
+}
+.card img{
+  width: 100%;
+  max-height: 230px;
+
+}
+
+.fondo{
+  background-image: url("../img/fondoMadera.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+h1 {
+  color: white;
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
+
+
+}
+
+#mes-oferta {
+  width: 100vw;
+}
+
+#mostrar-dia{
+  font-family: 'Acme', sans-serif;
+  padding: 5px !important;
+  margin-bottom: 10px !important;
+  font-weight: bold;
+
+}
+
+#precio{
+  font-family: 'AlfaSlabOne';
+  font-size: 40px;
+}
+#titulo-producto{
+  font-family: 'Baloo';
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 25px !important;
+}
+
+#slider-prod {
+  position: absolute;
+  top: 850px;
+  left: 105px;
+
+
+}
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 100px;
+  bottom: 10px;
+}
+#slider-lista{
+  max-width: 440px;
+  margin-left: 20px;
+}
+
+/* RELOJ DIGITAL*/
+.widget {
+
+}
+.widget p{
+  display: inline-block;
+  line-height: 1em;
+  color: white;
+}
+
+.fecha{
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+}
+.reloj {
+  width: 300px;
+  padding: 20px;
+  font-size: 4em;
+  text-align: center;
+
+}
+
+.reloj .caja-segundos {
+  display: inline-block;
+}
+.reloj .segundos,
+.reloj .ampm {
+  font-size: 2rem;
+  display: block;
+}
+.wrap {
+  width: 100vw;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
+.medio {
+  width: 100vw;
+  overflow: hidden;
+
+}
+
+/* ACEPTAMOS DEBITO*/
+.tarjetas {
+  width: 400px;
+  background-image: url("../img/tarjetas.jpg");
+  border-radius: 20px;
+  border: 2.5px solid;
+  box-shadow: 7px 5px 10px #000;
+  margin: 30px !important;
+  float: right;
+}
+.tarjetas p{
+  font-family: fantasy;
+  -webkit-text-fill-color: rgb(246, 179, 100);
+  -webkit-text-stroke: 1.4px rgb(71, 56, 33);
+  text-shadow: -5px -5px 7px #000;
+
+}
+.tarjetas p:nth-child(2n+1) {
+  font-size: 70px;
+  text-align: center;
+  font-weight: 400;
+}
+#todas{
+  font-size: 35px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.piccardelli {
+  background-color: rgba(0, 0, 0, 0.66);
+  margin-top: 30px !important;
+  margin-left: 15px !important;
+  margin-bottom: 30px !important;
+  background-image: url("../img/tablarecorte.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 10px 15px 30px #000;
+  border: 1.5px solid rgba(215, 103, 0, 0.85);
+  border-radius: 20px;
+  width: 45%;
+  height: 550px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+}
+.piccardelli p, h2 {
+  text-align: center;
+  -webkit-text-fill-color: rgb(246, 179, 100);
+  -webkit-text-stroke: 1.4px rgb(71, 56, 33);
+  text-shadow: -5px -5px 7px #000;
+
+}
+.piccardelli p{
+  font-family: 'Chicle';
+  font-size: 90px;
+  font-weight: bold;
+
+
+}
+.piccardelli h2{
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.lista-categorias{
+  width: 400px;
+  margin: 10px !important;
+  position: absolute;
+  right: 10px;
+  top: 500px;
+  padding: 10px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.75);
+
+}
+
+.lista-categorias ul{
+  list-style: none !important;
+  text-align: right;
+}
+
+.lista-categorias ul li {
+  text-align: center;
+  font-size: 38px;
+  color: black;
+  font-family:  fantasy;
+  text-shadow: 3px 3px 10px rgb(246, 179, 100);
+}
+
+.precio-categorias{
+  font-family: 'Bangers';
+  font-size: 60px;
+  color: red;
+
+}
