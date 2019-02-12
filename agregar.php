@@ -17,13 +17,13 @@ require "php/agregarProd.php";
 </head>
   <style media="screen">
     body {
-      background-color: rgb(161, 161, 161);
+      background-color: rgba(237, 168, 14, 0.86);
     }
   </style>
   <body>
     <div class="container">
       <header>
-        <h1>Agregar Productos</h1>
+        <h1 class="text-center">Agregar Productos</h1><br><br><br>
         <a class="btn btn-primary" href="index.php">Volver al buscador</a>
         <br>
       </header>
@@ -40,38 +40,13 @@ require "php/agregarProd.php";
             <input required autocomplete="off" class="form-control" id="precio_costo" type="number" step="any" name="precio_costo" value="">
           </div>
 
-          <div class="form-group">
-            <label for="precio_venta">Precio de Venta:</label>
-            <input required autocomplete="off" class="form-control" id="precio_venta" type="number" step="any" name="precio_venta" value="">
-          </div>
+
 
           <div class="form-group">
             <label for="proveedor">Proveedor</label>
             <input autocomplete="off" class="form-control" id="proveedor" type="text" name="proveedor" value="">
           </div>
           <br>
-          <select class="custom-select" name="categoria">
-            <option value="Sin categoria">Seleccionar categoria</option>
-            <option value="fiambreria">Fiambreria</option>
-            <option value="almacen">Almacen</option>
-            <option value="lacteos">Lacteos</option>
-            <option value="congelados">Congelados</option>
-            <option value="bebidas_sin_alcohol">Bebidas sin alcohol</option>
-            <option value="bebidas_con_alcohol">Bebidas con Alcohol</option>
-          </select>
-
-          <div class="form-group">
-            <br>
-            <label for="imagen">Subir una Imagen</label>
-            <input type="file" class="form-control-file" id="imagen" name="img-producto">
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox"  name="check-oferta"class="custom-control-input" id="customCheck1" value="1">
-              <label class="custom-control-label" for="customCheck1">Quieres ponerlo en OFERTA?</label>
-            </div>
-          </div>
 
 
           <input id="btn-agregar" class="btn btn-success float-right" type="submit" name="btn-agregar" value="Agregar">

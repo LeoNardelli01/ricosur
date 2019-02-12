@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbName = 'mydb';
+$dbName = 'panaderia';
 $usuario = 'root';
 $password = 'root';
 

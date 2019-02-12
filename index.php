@@ -8,13 +8,13 @@
     <script src="assets/js/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Buscador de Productos</title>
+    <title>Panaderia Nuevo Modelo</title>
   </head>
   <body>
     <style media="screen">
 
       body {
-        background-color: rgb(161, 161, 161);
+        background-color: rgba(237, 168, 14, 0.86);
       }
 
       #caja_busqueda{
@@ -27,20 +27,18 @@
     </style>
     <div class="container-fluid">
       <header>
-        <h1 class="text-center">Ricosur</h1>
-        <h6 class="text-center">Buscador de Productos</h6>
+        <h1 class="text-center">Nuevo Modelo</h1>
+        <h6 class="text-center">Buscador de Productos</h6><br><br><br>
       </header>
 
       <section class="buscar">
         <div class="form-group">
-          <input id="caja_busqueda" class="form-control" type="text" name="caja_busqueda" value="" placeholder="Nombre del producto, Proveedor o Categoria">
+          <input id="caja_busqueda" class="form-control" type="text" name="caja_busqueda" value="" placeholder="Nombre del producto o Proveedor">
         </div>
       </section>
 
       <div class="container-fluid">
         <a  class="btn btn-success" href="agregar.php">Agregar Producto</a>
-        <a  class="btn btn-primary float-right" id="btn-pantallaUno" target="_blank" href="pantallaUno.php">Pantalla UNO</a>
-        <a  class="btn btn-warning float-right" id="btn-pantallaGrande" href="#">Pantalla Grande</a>
       </div>
       <br><br>
       <section class="mostrar-datos"><!-- DATOS--></section>

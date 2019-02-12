@@ -3,14 +3,13 @@
 require "conexion.php";
 
 $salida = "";
-$query = "SELECT * FROM productos ORDER BY ultima_modificacion DESC;";
+$query = "SELECT * FROM proveedores ORDER BY ultima_mod DESC;";
 
 
 if (isset($_GET['buscar'])) {
   $buscar = $_GET['buscar'];
-  $query = "SELECT * FROM productos WHERE nombre_prod LIKE '%".$buscar."%'
-            OR proveedor LIKE '%".$buscar."%'
-            OR categoria LIKE '%".$buscar."%';";
+  $query = "SELECT * FROM proveedores WHERE nombre_prod LIKE '%".$buscar."%'
+            OR proveedor LIKE '%".$buscar."%';";
 }
 
 
@@ -23,14 +22,11 @@ if ($filas > 0) {
   $salida.= "<table class='table table-striped'>
               <thead>
                 <tr>
-                  <th>IMG</th>
+
                   <th>Nombre del producto</th>
                   <th>Precio Costo</th>
-                  <th>Precio Venta</th>
                   <th>Proveedor</th>
-                  <th>Categoria</th>
                   <th>Ultima mod.</th>
-                  <th>Oferta</th>
                   <th></th>
                 </tr>
               </thead>
@@ -38,23 +34,23 @@ if ($filas > 0) {
 
 
   while ($fila = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $fecha = explode(" ", $fila['ultima_modificacion']);
+    $fecha = explode(" ", $fila['ultima_mod']);
+
+    $fecha_final = date("d/m/y", strtotime($fecha[0]));
+
+
 
 
     $salida.= "<tr>
-              <td><img src='".$fila['imagen']."' alt='' width='45' heigth='45'></td>
               <td>".$fila['nombre_prod']."</td>
               <td>$".$fila['precio_costo']."</td>
-              <td class='font-weight-bold'>$".$fila['precio_venta']."</td>
               <td>".$fila['proveedor']."</td>
-              <td>".$fila['categoria']."</td>
-              <td>".$fecha[0]."</td>
-              <td>".$fila['oferta']."</td>
+              <td>".$fecha_final."</td>
               <td>
 
-                <a class='btn btn-warning' href='php/modificar.php?id_prod=".$fila['id_prod']."'>&#9998;</a>
+                <a class='btn btn-warning' href='php/modificar.php?id=".$fila['id']."'>&#9998;</a>
 
-                <a class='btn btn-danger' href='php/eliminar.php?id_prod=".$fila['id_prod']."'>&times;</a>
+                <a class='btn btn-danger' href='php/eliminar.php?id=".$fila['id']."'>&times;</a>
 
               </td>
             </tr>";
@@ -63,7 +59,7 @@ if ($filas > 0) {
   $salida.= "</tbody></table>";
 
 }else{
-  $salida.= "<h3 class='bg-danger text-white '>No se encontraron coincidencias</h3>";
+  $salida.= "<h3 class='bg-danger text-white '>No hay resultados</h3>";
 }
 
 echo $salida;

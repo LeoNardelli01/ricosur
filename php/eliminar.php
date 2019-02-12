@@ -1,9 +1,9 @@
 <?php
 require "conexion.php";
-if (isset($_GET['id_prod'])) {
+if (isset($_GET['id'])) {
 
-  $id = $_GET['id_prod'];
-  $buscarId = "SELECT * FROM productos WHERE id_prod LIKE $id;";
+  $id = $_GET['id'];
+  $buscarId = "SELECT * FROM proveedores WHERE id LIKE $id;";
   $stmt = $conn->prepare($buscarId);
   $stmt->execute();
   $fila = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -11,7 +11,7 @@ if (isset($_GET['id_prod'])) {
 }
 
 if (isset($_POST['btn-eliminar'])) {
-  $query = "DELETE FROM productos WHERE id_prod=$id;";
+  $query = "DELETE FROM proveedores WHERE id=$id;";
   $stmtEliminar = $conn->prepare($query);
   $stmtEliminar->execute();
 
@@ -33,11 +33,11 @@ if (isset($_POST['btn-eliminar'])) {
 </head>
 <style media="screen">
 body {
-  background-color: rgb(161, 161, 161);
+  background-color: rgba(237, 168, 14, 0.86);
 }
 </style>
   <body>
-    <h1>Eliminar</h1>
+    <h1 class="text-center">Eliminar</h1><br><br><br>
     <a href="../index.php" class="btn btn-success">Volver</a>
     <table class='table table-striped'>
                 <thead>
@@ -45,24 +45,23 @@ body {
                     <th>ID</th>
                     <th>Nombre del producto</th>
                     <th>Precio Costo</th>
-                    <th>Precio Venta</th>
                     <th>Proveedor</th>
-                    <th>Categoria</th>
                     <th>Ultima mod.</th>
-                    <th>Oferta</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><?php echo $fila['id_prod'] ?></td>
+                    <?php
+                      $fecha = explode(" ", $fila['ultima_mod']);
+                      $fecha_final = date("d/m/y", strtotime($fecha[0]));
+                    ?>
+
+                    <td><?php echo $fila['id'] ?></td>
                     <td><?php echo $fila['nombre_prod'] ?></td>
                     <td><?php echo $fila['precio_costo'] ?></td>
-                    <td><?php echo $fila['precio_venta'] ?></td>
                     <td><?php echo $fila['proveedor'] ?></td>
-                    <td><?php echo $fila['categoria'] ?></td>
-                    <td><?php echo $fila['ultima_modificacion'] ?></td>
-                    <td><?php echo $fila['oferta'] ?></td>
+                    <td><?php echo $fecha_final ?></td>
                   </tr>
                 </tbody>
               </table>
